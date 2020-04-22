@@ -1,0 +1,14 @@
+/* pages/homes/homes.wxss */
+swiper{
+  height: 300rpx;
+}
+swiper-item image{
+  width: 100%;
+}
+.list{
+  display: flex;
+  padding: 5px;
+}
+.list image{
+  width: 200rpx;
+}

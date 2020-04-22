@@ -1,0 +1,10 @@
+/* pages/home/home.wxss */
+input{
+  border: 1px solid #ccc;
+}
+.todolist{
+  display: flex;
+}
+.active{
+  background-color: #ac0;
+}

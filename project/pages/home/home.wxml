@@ -1,0 +1,28 @@
+<!--pages/home/home.wxml-->
+<view>home</view>
+<text>0000</text>
+<view>支持表达式语法： {{ 10+20 }}</view>
+<view>支持变量： {{ mytext }}</view>
+<button bindtap="handleYxmTap">click</button>
+<view class="todolist">
+  <input bindinput="handleinput" value="{{mytext}}"></input>
+  <button size="mini" bindtap="handleAdd">add</button>
+</view>
+<view wx:for="{{list}}" wx:key="item">
+<!-- 
+  item index 都是固定的。不能变化的
+  重命名：item wx:for-item="yxmitem"
+ -->
+  {{item}}---{{index}}
+  <!-- 传参  data-="{{参数}}" -->
+  <button size="mini" bindtap="handleDel" data-myindex="{{index}}">del</button>
+</view>
+<text>点击变色</text>
+<view wx:for="{{list}}" bindtap="handleColor" data-dataindex="{{index}}"
+wx:key="{{index}}" 
+class="{{current === index ? 'active' : ''}}">
+  <text>{{item}}</text>
+</view>
+<button bindtap="handleCreatd">创建 / 删除</button>
+<view wx:if="{{isCreatd}}">我是动态创建和删除</view>
+<view hidden="{{isshow}}">动态隐藏和显示</view>
